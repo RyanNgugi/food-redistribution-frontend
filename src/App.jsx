@@ -4,7 +4,10 @@ import RegisterPage from './pages/RegisterPage'
 import DonorDashboard from './pages/DonorDashboard'
 import ListingsPage from './pages/ListingsPage'
 import LandingPage from './pages/LandingPage'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import AdminDashboard from './pages/AdminDashboard'
 import Navbar from './components/Navbar'
+import AdminRoute from './components/AdminRoute'
 
 function App() {
   return (
@@ -16,6 +19,15 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/donor-dashboard" element={<DonorDashboard />} />
         <Route path="/listings" element={<ListingsPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route
+          path="/admin-dashboard"
+          element={
+            <AdminRoute>
+              <AdminDashboard />
+            </AdminRoute>
+          }
+        />
       </Routes>
     </BrowserRouter>
   )
