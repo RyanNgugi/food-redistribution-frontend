@@ -1,16 +1,38 @@
-# React + Vite
+# WasteNot KE: Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React frontend for **WasteNot KE**, a prototype web system for redistributing surplus food in Nairobi. It is designed to connect restaurants and event organizers that have surplus food with charities and farms that can use it.
 
-Currently, two official plugins are available:
+This was a university project for my BSc in Informatics and Computer Science at Strathmore University. I built the frontend; a project partner built the backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What the frontend includes
 
-## React Compiler
+- React and Vite single-page app with client-side routing
+- Authentication context for logged-in users
+- Admin dashboard for user management and listing moderation
+- Admin-only route guard (`AdminRoute`) that restricts access to admin pages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the Oxlint configuration
+- React
+- Vite
+- JavaScript, HTML, CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+The backend (Node.js, Express, Prisma, MySQL) is in a separate repository: [food-redistribution-api](https://github.com/kylemwastaken/food-redistribution-api)
+
+
+## Running locally
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Create a `.env` file with the backend API URL (see `.env.example` if present)
+4. Start the dev server: `npm run dev`
+
+The backend must be running for data-driven pages to work.
+
+## Status
+
+Prototype built for coursework and run locally; it is not deployed. Authentication for creating listings is still being completed on both the frontend and the backend.
+
+## Author
+
+Ryan Ngugi Wainaina, Strathmore University
